@@ -1,0 +1,2 @@
+[webservers]
+54.193.189.164 ansible_ssh_private_key_file=~/.ssh/Ansible-test/Ansible-key.pem ansible_ssh_user=ec2-user

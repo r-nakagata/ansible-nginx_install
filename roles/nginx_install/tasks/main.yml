@@ -1,0 +1,19 @@
+---
+# tasks file for nginx_install
+
+- name: nginx install
+  yum:
+    name: nginx
+    state: latest
+
+- name: nginx start
+  service: 
+    name: nginx
+    state: started
+    enabled: yes
+
+- name: nginx modify file
+  replace: 
+    dest: /etc/nginx/nginx.conf
+    regexp: 'keepalive_timeout.*'
+    replace: 'keepalive_timeout   100; '
